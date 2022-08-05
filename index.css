@@ -1,0 +1,72 @@
+@import url('https://unsplash.com/s/photos/nature');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'arial', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow:hidden;
+  height: 100vh;
+}
+
+.cards {
+  display: flex;
+  width:90%;
+}
+.cards:hover{
+    cursor:pointer;
+    width:90%;
+}
+
+
+.imgbox {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius:50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+
+.imgbox h1 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.imgbox-active {
+  flex:5;
+  border-radius:50px;
+  cursor: pointer;
+}
+.imgbox-active h1{
+font-size: 24px;
+  position: absolute;
+  bottom: 80px;
+  left: 380px;
+  overflow:hidden;
+  opacity: 1;
+  color:#fff;
+}
+
+@media (max-width: 480px) {
+  .cards {
+    width: 100%;
+  }
+
+  .imgbox:nth-of-type(4),
+  .imgbox:nth-of-type(5) {
+    display: none;
+  }
+}
